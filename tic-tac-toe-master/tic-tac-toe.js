@@ -46,7 +46,7 @@ window.onload=function(){
         square[y].onclick= function(){
             if(!win)
             {
-                if(square[y].classList[4]!="clicked" && square[y].innerHTML==""){
+                if(square[y].classList[4]!="clicked" && square[y].innerHTML== ""){
                     if(x==true){
                         square[y].innerHTML = "X";
                         square[y].classList.add("X");
@@ -113,6 +113,7 @@ function checkwin(y,val){
         allEqual(psbs[7])?win=true:console.log("not same suh")
     }
     if(win){
-        document.getElementById("status").innerHTML="Congratulations "+val.toUpperCase()+" is the Winner!!"
+       document.getElementById("status").innerHTML="Congratulations "+val.toUpperCase()+" is the Winner!!"
+       document.getElementById("status").classList.add("you-won");
     }
 }
